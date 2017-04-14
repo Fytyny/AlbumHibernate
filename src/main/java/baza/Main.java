@@ -4,12 +4,15 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class Test{
+/**
+ * Created by Cziczarito on 13.04.2017.
+ */
+public class Main {
     public static void main(String[] args){
         EntityManagerFactory entityManagerFactory =  Persistence.createEntityManagerFactory( "Album" );;
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-
         entityManager.close();
-        System.out.println("done");
+        entityManagerFactory.close();
     }
+
 }

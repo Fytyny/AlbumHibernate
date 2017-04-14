@@ -6,11 +6,9 @@
     <persistence-unit name="Album" transaction-type="RESOURCE_LOCAL">
         <properties>
 
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/albums"/>
-            <property name="javax.persistence.jdbc.user" value="login"/>
-            <property name="javax.persistence.jdbc.password" value="password"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:albums"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLiteDialect"/>
 
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
 
